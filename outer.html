@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <style>
+    .logo {
+      position: relative;
+      width: 300px;
+      height: 300px;
+    }
+
+    .logo img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Only the outer ring spins */
+    .logo-outer {
+      animation: spin 8s linear infinite;
+      transform-origin: center center;
+    }
+
+    /* Inner logo stays still */
+    .logo-inner {
+      z-index: 2;
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="logo">
+    <img
+      src="assets/lips-outer.png"
+      class="logo-outer"
+      alt="Tagline Outer"
+    >
+
+    <img
+      src="assets/lips-inner.png"
+      class="logo-inner"
+      alt="Lips Inner"
+    >
+  </div>
+
+</body>
+</html>
